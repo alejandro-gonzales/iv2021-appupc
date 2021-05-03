@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\RolController;
+use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\CategoriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +22,12 @@ Route::get('/', function () {
 });
 
 Route::get('/persona', [PersonaController::class, 'index']);
+
+Route::get('/rol', [RolController::class, 'index']);
+
+Route::get('/empresa', [EmpresaController::class, 'index']);
+
+Route::get('/categoria', [CategoriaController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
