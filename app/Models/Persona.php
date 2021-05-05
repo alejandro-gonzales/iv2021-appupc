@@ -10,6 +10,6 @@ class Persona extends Model
     use HasFactory;
 
     protected $table = "persona";
-    protected $filiable = ['id', 'nombre','apellido','direccion','celular','ci','geolocalizacion','created_at','updated_at'];
+    protected $fillable = ['id', 'nombre','apellido','direccion','celular','ci','geolocalizacion','created_at','updated_at'];
 
 }

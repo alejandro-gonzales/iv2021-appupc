@@ -18,10 +18,14 @@ use App\Http\Controllers\CategoriaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('template/main/index');
 });
 
-Route::get('/persona', [PersonaController::class, 'index']);
+//Route::get('/persona', [PersonaController::class, 'index']);
+
+Route::resource('persona', PersonaController::class);
+
+
 
 Route::get('/rol', [RolController::class, 'index']);
 
