@@ -4,6 +4,10 @@
 @endSection
 @section('icon', 'users')
 @section('title', 'Gestionar Personas')
+@section('content-header')
+    <a href="{{route('persona.create')}}" class="btn btn-primary">Agregar Nuevo</a>
+@endSection
+
 @section('content')
     <table class="table table-bordered table-striped">
         <thead>
