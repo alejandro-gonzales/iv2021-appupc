@@ -8,6 +8,12 @@
     <a href="{{route('persona.create')}}" class="btn btn-primary">Agregar Nuevo</a>
 @endSection
 
+@section('action')
+    {{route('persona.index')}}
+@endSection
+
+@section('placeholder', 'persona')
+
 @section('content')
     <table class="table table-bordered table-striped">
         <thead>
