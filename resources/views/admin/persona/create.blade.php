@@ -2,6 +2,12 @@
 @section('title', 'Registrar Personas')
 @section('icon', 'user')
 
+@section('action')
+    {{route('persona.index')}}
+@endSection
+
+@section('placeholder', 'persona')
+
 @section('content')
     <form action="{{route('persona.store')}}" method="post">
         @csrf
