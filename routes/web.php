@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 Route::resource('persona', PersonaController::class);
 
-
+Route::get('persona/{id}/destroy', [PersonaController::class, 'destroy'])->name('persona.destroy');
 
 Route::get('/rol', [RolController::class, 'index']);
 
