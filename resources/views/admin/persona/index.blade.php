@@ -28,7 +28,9 @@
                 <td>{{$persona->ci}}</td>
                 <td>{{$persona->celular}}</td>
                 <td>{{$persona->direccion}}</td>
-                <td>Opciones</td>
+                <td>
+                    <a href="{{route('persona.edit', $persona->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                </td>
             </tr>
             @endforeach
         </tbody>
