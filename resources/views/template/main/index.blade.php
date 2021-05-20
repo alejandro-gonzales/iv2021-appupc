@@ -53,6 +53,11 @@
                                 Personas
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <a class="nav-link" href="{{route('cliente.index')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Clientes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
                         </div>
                     </div>     
                     <div class="sb-sidenav-footer">
