@@ -28,6 +28,8 @@ Route::resource('persona', PersonaController::class);
 
 Route::get('persona/{id}/destroy', [PersonaController::class, 'destroy'])->name('persona.destroy');
 
+Route::get('cliente/report', [ClienteController::class, 'report'])->name('cliente.report');
+
 Route::resource('cliente', ClienteController::class);
 
 Route::get('/rol', [RolController::class, 'index']);

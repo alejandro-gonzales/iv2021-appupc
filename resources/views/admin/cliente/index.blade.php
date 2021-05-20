@@ -6,6 +6,7 @@
 @section('title', 'Gestionar Personas')
 @section('content-header')
     <a href="{{route('cliente.create')}}" class="btn btn-primary">Agregar Cliente</a>
+    <a href="{{route('cliente.report')}}" class="btn btn-danger"><i class="fa fa-file-pdf"></i></a>
 @endSection
 
 @section('action')

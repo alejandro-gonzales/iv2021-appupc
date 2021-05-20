@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 use App\Models\Persona;
+use PDF;
 
 class ClienteController extends Controller
 {
@@ -27,5 +28,11 @@ class ClienteController extends Controller
         $cliente = new Cliente($request->all());
         $cliente->save();
         return redirect()->route('cliente.index');
+    }
+
+    public function report(){
+        $clientes = Cliente::where('estado', 1)->get();
+        $pdf_clientes = PDF::loadView('admin/cliente/report', array('clientes' => $clientes));
+        return $pdf_clientes->download('reporte_cliente.pdf');
     }
 }
