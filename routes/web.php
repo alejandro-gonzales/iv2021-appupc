@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\CategoriaController;
@@ -26,6 +27,8 @@ Route::get('/', function () {
 Route::resource('persona', PersonaController::class);
 
 Route::get('persona/{id}/destroy', [PersonaController::class, 'destroy'])->name('persona.destroy');
+
+Route::resource('cliente', ClienteController::class);
 
 Route::get('/rol', [RolController::class, 'index']);
 
